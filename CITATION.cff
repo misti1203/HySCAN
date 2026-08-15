@@ -1,0 +1,109 @@
+cff-version: 1.2.0
+message: If you use this software or method, please cite the ICML 2026 paper.
+title: 'HySCAN: Hybrid Space-aware Stochastic Convolution Attention Noise'
+type: software
+authors:
+- given-names: Joy
+  family-names: Dhar
+- given-names: Manish Kumar
+  family-names: Pandey
+- given-names: Behzad
+  family-names: Bozorgtabar
+- given-names: Nayyar
+  family-names: Zaidi
+- given-names: Wenyu
+  family-names: Zhang
+- given-names: Wei-Hong
+  family-names: Li
+- given-names: Tingting
+  family-names: Mu
+- given-names: Dwarikanath
+  family-names: Mahapatra
+- given-names: Mahsa
+  family-names: Baktashmotlagh
+- given-names: Trung
+  family-names: Le
+- given-names: Chen
+  family-names: Chen
+- given-names: Sajib
+  family-names: Mistry
+- given-names: Camila
+  family-names: Gonzalez
+- given-names: Samira
+  family-names: Ebrahimi Kahou
+- given-names: Lina
+  family-names: Yao
+- given-names: Piotr
+  family-names: Koniusz
+- given-names: Robert B.
+  family-names: Fisher
+- given-names: Dinh
+  family-names: Phung
+- given-names: Bohyung
+  family-names: Han
+- given-names: Nuno
+  family-names: Vasconcelos
+- given-names: Pietro
+  family-names: Lio
+repository-code: https://github.com/misti1203/HySCAN
+url: https://github.com/misti1203/HySCAN
+keywords:
+- adversarial robustness
+- certified robustness
+- randomized smoothing
+- stochastic convolution
+- attention noise
+- medical imaging
+- computer vision
+preferred-citation:
+  type: conference-paper
+  title: Does a Hybrid Space-Aware Randomized Defense Improve Empirical and Certified Adversarial Robustness?
+  authors:
+  - given-names: Joy
+    family-names: Dhar
+  - given-names: Manish Kumar
+    family-names: Pandey
+  - given-names: Behzad
+    family-names: Bozorgtabar
+  - given-names: Nayyar
+    family-names: Zaidi
+  - given-names: Wenyu
+    family-names: Zhang
+  - given-names: Wei-Hong
+    family-names: Li
+  - given-names: Tingting
+    family-names: Mu
+  - given-names: Dwarikanath
+    family-names: Mahapatra
+  - given-names: Mahsa
+    family-names: Baktashmotlagh
+  - given-names: Trung
+    family-names: Le
+  - given-names: Chen
+    family-names: Chen
+  - given-names: Sajib
+    family-names: Mistry
+  - given-names: Camila
+    family-names: Gonzalez
+  - given-names: Samira
+    family-names: Ebrahimi Kahou
+  - given-names: Lina
+    family-names: Yao
+  - given-names: Piotr
+    family-names: Koniusz
+  - given-names: Robert B.
+    family-names: Fisher
+  - given-names: Dinh
+    family-names: Phung
+  - given-names: Bohyung
+    family-names: Han
+  - given-names: Nuno
+    family-names: Vasconcelos
+  - given-names: Pietro
+    family-names: Lio
+  collection-title: Proceedings of the 43rd International Conference on Machine Learning
+  volume: '306'
+  publisher:
+    name: PMLR
+  year: 2026
+  url: https://icml.cc/virtual/2026/poster/65726
