@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+  <title id="title">HySCAN overview</title>
+  <desc id="desc">HySCAN combines Gaussian input smoothing, RWAN attention-gated stochastic convolution weights, and SANI dual-branch feature-space noise to improve certified l2 and empirical linfinity robustness.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.52" stop-color="#0B2340"/>
+      <stop offset="1" stop-color="#123852"/>
+    </linearGradient>
+    <linearGradient id="rw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#E11D48"/>
+    </linearGradient>
+    <linearGradient id="sa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="cert" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="emp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.30"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#A5C9E8"/>
+    </marker>
+    <style>
+      .title { font-family: DejaVu Sans, Arial, sans-serif; font-weight: 800; fill: #F7FAFC; }
+      .body { font-family: DejaVu Sans, Arial, sans-serif; fill: #D8E7F5; }
+      .muted { font-family: DejaVu Sans, Arial, sans-serif; fill: #9FB8D0; }
+      .chip { font-family: DejaVu Sans, Arial, sans-serif; font-weight: 700; fill: #DDEBFA; }
+      .panel { fill: #102B46; stroke: #2A5576; stroke-width: 2; }
+      .small { font-size: 20px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="800" rx="32" fill="url(#bg)"/>
+  <circle cx="1280" cy="80" r="230" fill="#19557A" opacity="0.16"/>
+  <circle cx="240" cy="760" r="260" fill="#0EA5E9" opacity="0.08"/>
+
+  <text x="800" y="76" text-anchor="middle" class="title" font-size="58">HySCAN</text>
+  <text x="800" y="116" text-anchor="middle" class="body" font-size="24">Hybrid Space-aware Stochastic Convolution Attention Noise</text>
+
+  <g transform="translate(406 138)">
+    <rect x="0" y="0" width="220" height="36" rx="18" fill="#1B3D5A" stroke="#356C92"/>
+    <text x="110" y="25" text-anchor="middle" class="chip" font-size="17">FRESH RESAMPLING</text>
+    <rect x="242" y="0" width="174" height="36" rx="18" fill="#1B3D5A" stroke="#356C92"/>
+    <text x="329" y="25" text-anchor="middle" class="chip" font-size="17">TRAINING</text>
+    <rect x="438" y="0" width="174" height="36" rx="18" fill="#1B3D5A" stroke="#356C92"/>
+    <text x="525" y="25" text-anchor="middle" class="chip" font-size="17">INFERENCE</text>
+    <rect x="634" y="0" width="190" height="36" rx="18" fill="#1B3D5A" stroke="#356C92"/>
+    <text x="729" y="25" text-anchor="middle" class="chip" font-size="17">CERTIFICATION</text>
+  </g>
+
+  <!-- Input panel -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="245" width="270" height="310" rx="28" class="panel"/>
+  </g>
+  <text x="205" y="290" text-anchor="middle" class="title" font-size="29">INPUT</text>
+  <g transform="translate(118 324)">
+    <rect width="174" height="132" rx="16" fill="#0B1D31" stroke="#3F7397" stroke-width="2"/>
+    <g opacity="0.95">
+      <rect x="18" y="18" width="34" height="34" rx="5" fill="#38BDF8"/>
+      <rect x="57" y="18" width="34" height="34" rx="5" fill="#1D4ED8"/>
+      <rect x="96" y="18" width="34" height="34" rx="5" fill="#60A5FA"/>
+      <rect x="135" y="18" width="21" height="34" rx="5" fill="#0EA5E9"/>
+      <rect x="18" y="57" width="34" height="34" rx="5" fill="#0E7490"/>
+      <rect x="57" y="57" width="34" height="34" rx="5" fill="#7DD3FC"/>
+      <rect x="96" y="57" width="34" height="34" rx="5" fill="#2563EB"/>
+      <rect x="135" y="57" width="21" height="34" rx="5" fill="#38BDF8"/>
+      <rect x="18" y="96" width="34" height="18" rx="5" fill="#0369A1"/>
+      <rect x="57" y="96" width="34" height="18" rx="5" fill="#93C5FD"/>
+      <rect x="96" y="96" width="34" height="18" rx="5" fill="#0284C7"/>
+      <rect x="135" y="96" width="21" height="18" rx="5" fill="#1E40AF"/>
+    </g>
+  </g>
+  <text x="205" y="486" text-anchor="middle" class="body" font-size="24">x + ε</text>
+  <text x="205" y="519" text-anchor="middle" class="muted" font-size="18">Gaussian smoothing</text>
+  <path d="M340 400 H402" stroke="#A5C9E8" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- HySCAN main container -->
+  <g filter="url(#shadow)">
+    <rect x="410" y="205" width="770" height="420" rx="34" fill="#0D253E" stroke="#4F7EA1" stroke-width="2.5"/>
+  </g>
+  <text x="795" y="242" text-anchor="middle" class="title" font-size="30">HYSCAN BLOCK</text>
+
+  <!-- RWAN -->
+  <g filter="url(#shadow)">
+    <rect x="450" y="275" width="315" height="285" rx="26" fill="url(#rw)" opacity="0.94"/>
+  </g>
+  <text x="607" y="316" text-anchor="middle" class="title" font-size="32">RWAN</text>
+  <text x="607" y="342" text-anchor="middle" class="title" font-size="15">Random Weights with</text>
+  <text x="607" y="362" text-anchor="middle" class="title" font-size="15">Attention Noise</text>
+  <rect x="486" y="382" width="242" height="76" rx="14" fill="#611C32" opacity="0.72" stroke="#FCA5A5"/>
+  <text x="607" y="414" text-anchor="middle" class="body" font-size="21">W̃ = W + ρ(ξ ⊙ g(x))</text>
+  <text x="607" y="442" text-anchor="middle" class="body" font-size="16">attention-gated stochastic kernel</text>
+  <g transform="translate(505 478)">
+    <circle cx="24" cy="24" r="24" fill="#FFF" opacity="0.20"/>
+    <path d="M12 24 H36 M24 12 V36" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+    <text x="58" y="21" class="title" font-size="19">IMPLICIT</text>
+    <text x="58" y="43" class="body" font-size="17">weight-space stochasticity</text>
+  </g>
+
+  <!-- SANI -->
+  <g filter="url(#shadow)">
+    <rect x="815" y="275" width="325" height="285" rx="26" fill="url(#sa)" opacity="0.96"/>
+  </g>
+  <text x="977" y="316" text-anchor="middle" class="title" font-size="32">SANI</text>
+  <text x="977" y="342" text-anchor="middle" class="title" font-size="15">Stochastic Attention</text>
+  <text x="977" y="362" text-anchor="middle" class="title" font-size="15">Noise Injection</text>
+  <rect x="844" y="370" width="122" height="74" rx="15" fill="#083E70" stroke="#7DD3FC"/>
+  <text x="905" y="401" text-anchor="middle" class="title" font-size="19">RecRAN</text>
+  <text x="905" y="426" text-anchor="middle" class="body" font-size="15">progressive</text>
+  <rect x="990" y="370" width="122" height="74" rx="15" fill="#083E70" stroke="#7DD3FC"/>
+  <text x="1051" y="401" text-anchor="middle" class="title" font-size="19">NoRAN</text>
+  <text x="1051" y="426" text-anchor="middle" class="body" font-size="15">diverse</text>
+  <path d="M967 407 H984" stroke="#DFF6FF" stroke-width="3"/>
+  <text x="977" y="473" text-anchor="middle" class="body" font-size="19">normalized learnable fusion</text>
+  <g transform="translate(850 489)">
+    <circle cx="24" cy="24" r="24" fill="#FFF" opacity="0.20"/>
+    <path d="M12 27 Q24 8 36 27 Q24 43 12 27" fill="none" stroke="#FFF" stroke-width="3"/>
+    <text x="58" y="21" class="title" font-size="19">EXPLICIT</text>
+    <text x="58" y="43" class="body" font-size="17">feature-space stochasticity</text>
+  </g>
+
+  <path d="M765 416 H803" stroke="#DCEEFF" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M976 264 C970 210 620 210 610 264" stroke="#7DD3FC" stroke-width="3" stroke-dasharray="9 8" fill="none" marker-end="url(#arrow)"/>
+  <text x="795" y="195" text-anchor="middle" class="muted" font-size="17">shared attention-noise learner coordinates both spaces</text>
+  <path d="M450 580 C540 650 1050 650 1140 580" stroke="#5B86A8" stroke-width="3" stroke-dasharray="10 8" fill="none"/>
+  <text x="795" y="608" text-anchor="middle" class="muted" font-size="16">residual block replacement</text>
+
+  <path d="M1180 400 H1216" stroke="#A5C9E8" stroke-width="5" fill="none"/>
+  <circle cx="1222" cy="400" r="7" fill="#A5C9E8"/>
+  <path d="M1222 400 C1238 400 1235 310 1244 310" stroke="#A5C9E8" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1222 400 C1238 400 1235 495 1244 495" stroke="#A5C9E8" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Outputs -->
+  <g filter="url(#shadow)">
+    <rect x="1250" y="235" width="280" height="150" rx="26" fill="url(#cert)"/>
+    <rect x="1250" y="420" width="280" height="150" rx="26" fill="url(#emp)"/>
+  </g>
+  <g transform="translate(1270 268) scale(0.78)">
+    <path d="M36 0 L70 13 V47 C70 72 52 90 36 98 C20 90 2 72 2 47 V13 Z" fill="#ECFDF5" opacity="0.95"/>
+    <path d="M20 48 L31 60 L55 33" fill="none" stroke="#047857" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="1422" y="282" text-anchor="middle" class="title" font-size="25">CERTIFIED ℓ₂</text>
+  <text x="1422" y="315" text-anchor="middle" class="body" font-size="17">randomized smoothing</text>
+  <text x="1422" y="342" text-anchor="middle" class="body" font-size="17">joint (ε, ω, ψ) guarantee</text>
+
+  <g transform="translate(1270 453) scale(0.78)">
+    <path d="M36 0 L70 13 V47 C70 72 52 90 36 98 C20 90 2 72 2 47 V13 Z" fill="#FFF7ED" opacity="0.95"/>
+    <path d="M17 64 C28 35 44 72 58 34" fill="none" stroke="#B45309" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="1422" y="467" text-anchor="middle" class="title" font-size="25">EMPIRICAL ℓ∞</text>
+  <text x="1422" y="500" text-anchor="middle" class="body" font-size="17">APGD · AA · PGD</text>
+  <text x="1422" y="527" text-anchor="middle" class="body" font-size="17">EOT · BPDA</text>
+
+  <rect x="260" y="700" width="1080" height="48" rx="24" fill="#0A1D31" stroke="#315D7D"/>
+  <text x="800" y="731" text-anchor="middle" class="body" font-size="21">Structured stochasticity across parameters + representations • ICML 2026</text>
+</svg>
